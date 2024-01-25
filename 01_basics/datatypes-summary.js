@@ -15,9 +15,9 @@ console.log(id === anotherId);
 const bigNumber = 123456789987653n
 // console.log(typeof bigNumber); -> bigInt
 
+
 // Reference (Non primitive)
 // Array, Objects, Functions
-
 const heros = ["shaktiman", "nagraj", "doga"]
 let myObj = {
     name: "Aditya",
@@ -35,10 +35,10 @@ console.log(typeof anotherId);
  /*Stack (Primitive) -> isme ek copy milti hai, to agr ek dusri 
 value change hogi to original waali ko farak ni pdega ; Heap (Non-Primitive) ->isme reference milta hai tlb exactly donon user same hote hai */
 
-let myyoutubename = "AdityaDashorefitness"
-let anothername = "Rohit Sharma"
-
-console.log(myyoutubename);
+let myYoutubename = "AdityaDashorefitness"
+let anothername = myYoutubename
+anothername = "coffee code"
+console.log(myYoutubename);
 console.log(anothername);
 // ye upr waala stack memory ka example hai
 let userOne = {
@@ -46,7 +46,7 @@ let userOne = {
     upi:"user1@paytm"
 }
 let userTwo = userOne
-userTwo.email = "dahore.ad@gamil.com"
+userTwo.email = "dashore.ad@gamil.com"
 console.log(userOne.email);
 console.log(userTwo.email);
 // ye heap memory ka example hai
