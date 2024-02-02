@@ -8,7 +8,7 @@ let isLoggedIn = false
 
 
 // number ki range => 2 to the power 52-53
-// bigInt = number se jyada range chaahiye ho to
+// bigInt => number se jyada range chaahiye ho to
 // string => ""
 // boolean => true/false
 // null => standAlone value hai
