@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">JavaScript</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor.</h2>
+        <input type="password">
+        <ul>
+            <li>One</li>
+            <li>Two </li>
+            <li>Three</li>
+        </ul>
+    </div>   
+</body>
+</html>
+
+<!-- document.getElementById('title')
+@ document.getElementById('title').id
+@ document.getElementById('title').className
+@ document.getElementById('title').getAttribute('id')
+@ document.getElementById('title').getAttribute('class')
+@ document.getElementById('title').setAttribute('class','test') -->
+
+<!-- const title = document.getElementById("title")
+@ title.style.backgroundColor = 'green'
+@ title.style.margin = '30px'
+@ title.style.padding = '40%'
+@ title.style.borderRadius = '40%' -->
+<!-- @ title.TextContent -> isme pura text aaega
+like jo line 16 mai hai woh pura aaega "DOM learning JavaScript"
+@ title.innerText -> isme display none waala, hidden type ka chiz chhut jaaega 
+line 17 Dom learning aaega bs. 
+@ title.innerHTML -> ye html uthake dedega pura like ->'DOM learning <span style="display: none;">JavaScript</span>' -->
+
+<!-- @ document.querySelector('h2') -> isse jitne bhi h2 hai usem sbse pehle aaega woh select hoga.
+@ document.querySelectorALL('h2') -> isse sb h2 aajaenge
+@ document.querySelectorALL('h2').length -> isse total kitne hai uska no. aaega -->
+
+<!-- @ document.querySelector('input[type="password"]') -> isse input bhi select kr skte hai -->
+
