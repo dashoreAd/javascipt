@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+    
+</body>
+<script>
+    // pehla tarika.
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        // isse element bnega aur initalize hoga li mai
+        li.innerHTML = `${langName}`
+        // isme li ke innerHTML ko change krenge
+        document.querySelector('.language').
+        appendChild(li)
+        // queryselector se .language class ko select krenge aur usme appendChild(jodenge) krenge
+    }
+    addLanguage("Python")
+    // yha pr function call krenge
+    addLanguage("Java")
+    addLanguage("TypeScript")
+
+    // Dusra tarika -> ye Optimised aur better tarika h.
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        document.createTextNode(langName)
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("goLang")
+
+    // ab values ko edit krna h -> pehle value select krna pdega.
+    const secondLanguage = document.querySelector("li:nth-child(2)")
+    console.log(secondLanguage);
+    //  secondLanguage.innerHTML = "MongoDB" -> lekin ye optimised ni hai kuki iske kaaran sbhi element pehle last tree tak traverse krna pdega.
+    const newLi = document.createElement("li")
+    newLi.textContent = "Mongo DB"
+    secondLanguage.replaceWith(newLi)
+
+// ek aur edit ka example:- first jo jscript hai usko typescript se replace krna h.
+const firstLanguage = document.querySelector("li:first-child")
+firstLanguage.outerHTML = '<li>TypeScript</li>'
+
+// Ab remove krna hai goLang ko:-
+const langName = document.querySelector('li:nth-child(3)')
+// langName.remove();
+
+
+</script>
+</html>
