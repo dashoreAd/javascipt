@@ -10,12 +10,16 @@
 // console.log("02" > 1);
 
 // console.log(null > 0);
+// false
 // console.log(null == 0);
+// false
 // console.log(null >= 0);
+// true
 
 // console.log(undefined == 0);
 // console.log(undefined > 0);
 // console.log(undefined < 0);
+// sbhi ka false hai
 
-//  === -> data type bhi chek krta h
+//  === -> data type bhi check krta h
 // console.log("2" === 2);
