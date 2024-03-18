@@ -24,12 +24,12 @@ let myObj = {
     age: 24
 }
 const myFunction = function(){
-    console.log("Hello World");
+    // console.log("Hello World");
 }
-console.log(typeof heros);
-console.log(typeof myObj);
-console.log(typeof myFunction);
-console.log(typeof anotherId);
+// console.log(typeof heros);
+// console.log(typeof myObj);
+// console.log(typeof myFunction);
+// console.log(typeof anotherId);
 
 // ***********************************************************
  /*Stack (Primitive) -> isme ek copy milti hai, to agr ek dusri 
@@ -38,8 +38,8 @@ value change hogi to original waali ko farak ni pdega ; Heap (Non-Primitive) ->i
 let myYoutubename = "AdityaDashorefitness"
 let anothername = myYoutubename
 anothername = "coffee code"
-console.log(myYoutubename);
-console.log(anothername);
+// console.log(myYoutubename);
+// console.log(anothername);
 // ye upr waala stack memory ka example hai
 let userOne = {
     email: "user1@gmail.com",
@@ -47,6 +47,6 @@ let userOne = {
 }
 let userTwo = userOne
 userTwo.email = "dashore.ad@gamil.com"
-console.log(userOne.email);
-console.log(userTwo.email);
+// console.log(userOne.email);
+// console.log(userTwo.email);
 // ye heap memory ka example hai
