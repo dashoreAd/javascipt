@@ -1,13 +1,12 @@
-// js mai month 0 se start hoti h->
-
+// js mai month 0 se start hoti h, apne mann se ek date 1 jan 1970 yha se time  start hota hai calculate krne ka->
 let myDate = new Date()
-// console.log(myDate);
-// 2024-01-26T04:26:23.053Z -> isko pdh ni skte
+console.log(myDate);
+// 2024-01-26T04:26:23.053 Z -> isko pdh ni skte
 
 // console.log(myDate.toString());
 // Thu Jan 25 2024 18:50:33 GMT+0000
 
-// console.log(myDate.toDateString());
+// console.log(myDate.toDateString()); 
 // Thu Jan 25 2024
 
 // console.log(myDate.toLocaleString());
@@ -42,26 +41,26 @@ let myTimeStamp = Date.now()
 // console.log(myCreatedDate3.getTime());
 // 1674691200000 -> isse hum do date ko compare kr skte h
 
-// agr millisec ko sec mai krna hai to
-// console.log(Date.now());
-// 1706244484747 -> ye millisec mai hai
-// console.log(Math.floor(Date.now()/1000))
-
+console.log(Date.now());
+// 1706244484747 -> ye millisec mai hai, ye abhi ki date dega
+// agr uprwale millisec ko sec mai krna hai to
+console.log(Math.floor(Date.now()/1000))
+// 1706244484
 
 let newDate = new Date()
-console.log(newDate);
+// console.log(newDate);
 // 2024-01-26T04:52:08.084Z
 
-console.log(newDate.toDateString());
+// console.log(newDate.toDateString());
 // Fri Jan 26 2024
 
-console.log(newDate.toLocaleString());
+// console.log(newDate.toLocaleString());
 // 1/26/2024, 4:52:08 AM
 
- console.log(newDate.getMonth() + 1);
+//  console.log(newDate.getMonth() + 1);
 // 0 -> month mai +1 isliyue kiya hai kuki by default month 0(jan) to isko +1 dene se user ko confusion na ho isliye 
 
-console.log(newDate.getDay());
+// console.log(newDate.getDay());
 // 5 
 
 newDate.toLocaleString('default',{
