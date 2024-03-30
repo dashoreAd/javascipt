@@ -2,12 +2,12 @@ let score = "33abc"
 // console.log(typeof score);
 // console.log(typeof (score));
 
-let valueIntNumber = Number(score)
+let valueInNumber = Number(score)
 // console.log(typeof valueIntNumber);
 // console.log(valueIntNumber);
 
 // "33" => 33
-// "33abc" => NaN
+// "33abc" => NaN (type iska num hoga)
 // true => 1
 // false => 0
 
@@ -23,7 +23,7 @@ let stringNumber = String(someNumber)
 // console.log(stringNumber);
 // console.log(typeof stringNumber);
 
-// **************************** Operations ***********************
+// ************************** Operations ***********************
 
 let value = 3 
 let negValue = -value
@@ -42,7 +42,7 @@ let str3 = str1 + str2
 // console.log(str3);
 
 
-// console.log("1" + 2)  
+//  console.log("1" + 2)  
 // 12
 // console.log(1 + "2")
 // 12
@@ -60,7 +60,7 @@ num1 = num2 = num3 = 2+2
 
 let gameCounter = 100
 ++gameCounter;
-console.log(gameCounter);
+// console.log(gameCounter);
 
 // link to study
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
