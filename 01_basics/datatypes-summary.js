@@ -33,7 +33,8 @@ const myFunction = function(){
 
 // ***********************************************************
  /*Stack (Primitive) -> isme ek copy milti hai, to agr ek dusri 
-value change hogi to original waali ko farak ni pdega ; Heap (Non-Primitive) ->isme reference milta hai tlb exactly donon user same hote hai */
+value change hogi to original waali ko farak ni pdega ;       
+  Heap (Non-Primitive) ->isme reference milta hai mtlb original value milti h, agr ek change hogi to dusri value bhi chnge hogi */
 
 let myYoutubename = "AdityaDashorefitness"
 let anothername = myYoutubename
