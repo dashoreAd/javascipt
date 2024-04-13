@@ -1,6 +1,7 @@
 // js mai month 0 se start hoti h, apne mann se ek date 1 jan 1970 yha se time  start hota hai calculate krne ka->
 let myDate = new Date()
-console.log(myDate);
+// ye date ka ek object h uska ek instance h.  
+console.log (myDate);
 // 2024-01-26T04:26:23.053 Z -> isko pdh ni skte
 
 // console.log(myDate.toString());
@@ -39,12 +40,13 @@ let myTimeStamp = Date.now()
 // console.log(myTimeStamp);
 // 1706244162763 -> ye milliseonds mai 1 jan 1970 se count hai
 // console.log(myCreatedDate3.getTime());
+//.getTime()ise hum toLocaleString wali date h usko milisecond main convert kr skte h, isse kisi do date (milliseconds mai)ko compre krna easy hoga. 
 // 1674691200000 -> isse hum do date ko compare kr skte h
 
-console.log(Date.now());
+// console.log(Date.now());
 // 1706244484747 -> ye millisec mai hai, ye abhi ki date dega
 // agr uprwale millisec ko sec mai krna hai to
-console.log(Math.floor(Date.now()/1000))
+// console.log(Math.floor(Date.now()/1000))
 // 1706244484
 
 let newDate = new Date()
@@ -56,6 +58,11 @@ let newDate = new Date()
 
 // console.log(newDate.toLocaleString());
 // 1/26/2024, 4:52:08 AM
+
+console.log(newDate.getMonth());
+//  3
+console.log(newDate.getDay());
+//  6
 
 //  console.log(newDate.getMonth() + 1);
 // 0 -> month mai +1 isliyue kiya hai kuki by default month 0(jan) to isko +1 dene se user ko confusion na ho isliye 
