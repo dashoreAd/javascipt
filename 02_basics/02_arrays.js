@@ -18,20 +18,20 @@ const all_new_heros = [...marvel_heros, ...dc_heros]
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
 // const real_another_array = another_array.flat(1) 
-// [ 1, 2, 3, 4, 5, 6, 7, 6, 7, [ 4, 5 ] ] -> 1 mai 1 deep hoga
+// [ 1, 2, 3, 4, 5, 6, 7, 6, 7, [ 4, 5 ] ] -> 1 mai 1 deep hoga solve, 2 mai 2 deep solve hoga, aur 'infinity' bhi likh skte h, usse jitne deep array h sb ek saath solve hojaenge.
 
-// // const real_another_array2 = another_array.flat(2) 
+const real_another_array2 = another_array.flat(2) 
 // console.log(real_another_array2);
 // [ 1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5  ] -> 2 mai 2 deep tk hoga
 
-//  const real_another_array3 = another_array.flat(Infinity)
+ const real_another_array3 = another_array.flat(Infinity)
 // console.log(real_another_array3);
 // [1, 2, 3, 4, 5,6, 7, 6, 7, 4,5]
 
 // console.log(Array.isArray("Aditya"));
 // false -> kuki ye to string thi
 // console.log(Array.from("Aditya"));
-// [ 'A', 'd', 'i', 't', 'y', 'a' ] -> isse ye array bn gya
+// ['A', 'd', 'i', 't', 'y', 'a'] -> isse ye array bn gya
 // console.log(typeof (Array.from("Aditya")));
 // object
 // console.log(Array.isArray(Array.from("Aditya")));
