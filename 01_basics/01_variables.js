@@ -10,7 +10,7 @@ let accountState;
 console.log(accountId);
 
 /*
-ek variable 4 line type bhi declare ho skta hai pr ye galat h
+ek variable 4 line type bhi declare ho skta hai pr ye galat h.
 prefer not to use var because of issue in block scope and functional scope
 */
 console.table([accountEmail, accountId, accountPassword, accountCity, accountState])
