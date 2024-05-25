@@ -24,33 +24,36 @@
 
 // console.log(myArr.includes(9));
 // false -> mtlb 9 ni hai array mai
+// console.log(typeof(myArr.includes(9)));
+// iski value return hogi boolean mai.
 
 // console.log(myArr.indexOf(3));
-// -1 -> ye puchra h 3 hai ki ni, ni hai to -1 return krega aur hi 1 return krega 
+// -1 -> ye puchra h 3 hai ki ni, ni hai to -1 return krega aur hai to woh jis index pe hai uski value dedega. 
 
-// const newArr = myArr.join()
+const newArr = myArr.join()
+
 // console.log(myArr);
 // // [ 0, 1, 2, 'Raja' ]
 // console.log(newArr);
 // // 0,1,2,Raja -> join ne string mai convert krdiya
 
 // slice ->copy bnti hai , splice -> direct reference hota h
-console.log("A ->", myArr);
+// console.log("A ->", myArr);
 // A -> [ 0, 1, 2, 'Raja' ]
 
 const myn1 = myArr.slice(1,3) 
-console.log(myn1);
+// console.log(myn1);
 // [ 1, 2 ]
 
-console.log("B ->",myArr);
+// console.log("B ->",myArr);
 // B -> [ 0, 1, 2, 'Raja' ]
 
 //splice -> ye reference mtlb org array chng hoga 
 const myn2 = myArr.splice(1,3)
-console.log("C ->",myn2);
+// console.log("C ->",myn2);
 // C -> [ 1, 2, 'Raja' ]
 
-console.log(myArr);
+// console.log(myArr);
 // [ 0 ]
 
 
