@@ -43,5 +43,5 @@ const addTwo = function(num){
     return num + 2
 }
 
-normal function mai 
-// function expression mai hoisting ni hoti hai L-42
+//  normal function mai hoisting hoti hai.
+//  function expression mai hoisting ni hoti hai line42.
