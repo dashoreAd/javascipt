@@ -30,7 +30,7 @@ const JsUser ={
 // console.log(JsUser.email);
 // console.log(JsUser);
 
-// hum chaahte ki koi bhi humaara email ya kuch aur chnge ni kr pae - usko freeze krdo
+// hum chaahte ki koi bhi humaara email ya kuch aur chnge ni kr pae - usko freeze krdo, ye object pe hi lgta hai. 
 // Object.freeze(JsUser)
 JsUser.email = "aditya.dashore@google.com"
 // console.log(JsUser.email);
