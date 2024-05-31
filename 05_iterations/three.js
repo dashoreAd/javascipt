@@ -14,7 +14,8 @@ for ( const greet of greetings)
     // console.log(`Each character is ${greet}`);
 }
 
-// Maps
+// Map
+// Map mai koi duplicate value ni hoti
 const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United States of America")
@@ -33,7 +34,7 @@ map.set('IN', "India")
 //  console.log(key);
 // OUTPUT :- [ 'IN', 'India' ]
 // [ 'USA', 'United States of America' ]
-// [ 'Fr', 'France' ] -> o/p ket value pair mai aaega
+// [ 'Fr', 'France' ] -> o/p key value pair mai aaega
 
 // agr humko isi value ko destructure krna hai to:-
 // for (const [key, value] of map)
@@ -42,7 +43,7 @@ map.set('IN', "India")
 // USA :- United States of America
 // Fr :- France
 
-// object pe for of loop lagana  ]
+// object pe for of loop lagana  
 
 const myObject = {
     game1: 'NFS',
@@ -52,5 +53,6 @@ const myObject = {
 //  {
 //     console.log(object);
 //  }
+// Map iterable ni hoga, for in loop ni kaam krega
 // isse iterate ni hoga
 //  iske contniuation mai hi hai four.js
