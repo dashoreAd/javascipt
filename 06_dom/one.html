@@ -28,27 +28,99 @@
 </body>
 </html>       
 
-<!-- document.getElementById('title')
-@ document.getElementById('title').id
-@ document.getElementById('title').className
-@ document.getElementById('title').getAttribute('id')
-@ document.getElementById('title').getAttribute('class')
-@ document.getElementById('title').setAttribute('class','test') -->
+<!-- 
+getElementById se id select krte hai, chaahe to getElement by classname, tag name,node se bhi select kr skte hai, ab select krne ke baad usme changes krna ho like title ka attribute(means title name change krna ho) ya class ka attribute, to hum usko setAttribute se kr skte hai like:- getElementById('title').setAttribute('class','New').
 
-<!-- const title = document.getElementById("title")
-@ title.style.backgroundColor = 'green'
-@ title.style.margin = '30px'
-@ title.style.padding = '40%'
-@ title.style.borderRadius = '40%' -->
-<!-- @ title.TextContent -> isme pura text aaega
-like jo line 16 mai hai woh pura aaega "DOM learning JavaScript"
-@ title.innerText -> isme display none waala, hidden type ka chiz chhut jaaega 
-line 17 Dom learning aaega bs. 
-@ title.innerHTML -> ye html uthake dedega pura like ->'DOM learning <span style="display: none;">JavaScript</span>' -->
+Ab document.getElementById('titli').id kitni br hi likhenge isliye apan short kisi variable ke andr store kr skte hai like:- const titli = document.getElementById('titli').id .
+Ab "titli" ke andr pura hai to ab hum 
+titli.setAttribute('class','New') aisa bhi likh skte hai.
+****X****X****
+Accha ab agr styling change krna ho to:-
+title.style - ye zarur likhna pdta hai uske baad aap background color, color, font, etc kuch bhi chnge kr skte ho,
+mtlb ki puri styliong change kr skte ho aur hn isme change krne ke liye setAttribute bhi ni likhna padta hai.
+ex:-
+title.style.backgroundColor = 'yellow'
+title.style.Color = 'red'
+title.style.padding = '50px'
+ -->
+<!-- 
+ title.textContent
+o/p:- " Learning DOM Manipulation on VS Code"
+title.innerHTML
+o/p:- " Learning DOM Manipulation on VS Code"
+title.innerText
+o/p:- "Learning DOM Manipulation on VS Code"
 
-<!-- @ document.querySelector('h2') -> isse jitne bhi h2 hai usem sbse pehle aaega woh select hoga.
+ Accha ab jb aap ye teen likhoge to teeno text content de rhe hai to differnce kya hai
+ to pehele innerText aur text content mai dekhte hai maanlo aapne koi content display property se "display:none" krke rakha hai to woh innerText mai show ni hoga but woh textContent mai show hoga, ex:-
+--- title.innerText
+o/p:- "Learning DOM Manipulation on VS Code"
+--- title.textContent
+o/p:- "Learning DOM Manipulation on VS Code Bhai kaise ho? " 
+
+Ab innerHTML mai kya hota hai ki uske andr jo bhi HTML likha hai woh utha ke dedeta hai fir hum usme "." laga ke changes kr skte hai like,
+ex:-
+title.innerHTML
+' Learning DOM Manipulation on VS Code
+<span style="display: none;">Bhai kaise ho?</span>
+
+-->
+
+<!--querySelector ye bhi getElement type hi hai like:-
+document.getElementById('title').id = document.querySelector('#title')
+querySelector('.class')
+querySelector('p:first-child') --- is type se bhi likh skte hai
+
+@ document.querySelector('h2') -> isse jitne bhi h2 hai usem sbse pehle aaega woh select hoga.
 @ document.querySelectorALL('h2') -> isse sb h2 aajaenge
 @ document.querySelectorALL('h2').length -> isse total kitne hai uska no. aaega -->
 
-<!-- @ document.querySelector('input[type="password"]') -> isse input bhi select kr skte hai -->
+<!-- Accha isme direct Input Type bhi select kr skte hai.
+
+@ document.querySelector('input[type="password"]') -> isse input bhi select kr skte hai -->
+
+<!--  Isko aisa bhi kr skte hai:-
+const new = document.querySelector('ul') 
+new.querySelector('li')
+const green = new.querySelector('li')
+green.style.color = 'yellow'
+green.innerText = "Bhai"  --- isse jo first waale li mai likha hai woh change hojaega.
+
+
+document.querySelector('ul')
+const naya = document.querySelectorAll('li')
+naya 
+NodeList(3) [ li, li, li]
+
+naya[0].style.backgroundColor = "orange"
+"orange"
+naya[1].style.backgroundColor = "white"
+"white"
+naya[2].style.backgroundColor = "green"
+"green"
+   
+
+NOTE:- jb bhi aap ko NodeList mile tb aap usko direct style ni kr skte hai like previous types, usko as a array (mtlb woh array ni hai) use kr skte hai like
+indexes se :-
+naya[2].style.backgroundColor = "green"
+"green" .
+NodeList mai agr kisiko loop krna ho to sirf forEach use kr skte hai.
+Ek hota hai Node List aur ek hota HTML Collection,
+ab agr HTML Collection mai looping ni kr skte hai, to usko hum array mai convert krte hai:-
+Array.from(naya) - ab ye array ho chuka h
+const Converted = Array.from(naya)
+Converted.forEach(()=>)
+
+
+document.querySelectorAll('li')
+const new = document.querySelectorAll('li')
+new.forEach((L)=>
+L.style.backgroundcolor = 'yellow')
+
+isse loop hoga aur sb ek saath backgroundcolor yello hojaaega
+
+
+
+-->
+
 
