@@ -55,7 +55,7 @@ console.log(newNums)
 // agr condition galat hui to empty arry bhej dega []
 // agr maanlo aapne filter mai curly braces use kie to return likhna zruri hai, aur agr simple bracket usee kiye to fir retun likhna zaruri ni h.
 
-// agr upwaale ko foreach se bnaae to
+// agr uparwaala forEach se banaoge to fir if condition  deni padegi.
 
 const num = ["11","22","33","44","55"]
 const newNum = []
