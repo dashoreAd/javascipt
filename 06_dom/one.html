@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,15 +29,16 @@
 </html>       
 
 <!-- 
-getElementById se id select krte hai, chaahe to getElement by classname, tag name,node se bhi select kr skte hai, ab select krne ke baad usme changes krna ho like title ka attribute(means title name change krna ho) ya class ka attribute, to hum usko setAttribute se kr skte hai like:- getElementById('title').setAttribute('class','New').
+getElementById se id select krte hai, chaahe to getElement by classname, tag name,node se bhi select kr skte hai, ab select krne ke baad usme changes krna ho like title ka attribute,(title kya hai ek attribute hai id ka)(means title name change krna ho) ya class ka attribute, to hum usko setAttribute se kr skte hai like:- document.getElementById('title').setAttribute('class','New').
 
 Ab document.getElementById('titli').id kitni br hi likhenge isliye apan short kisi variable ke andr store kr skte hai like:- const titli = document.getElementById('titli').id .
 Ab "titli" ke andr pura hai to ab hum 
 titli.setAttribute('class','New') aisa bhi likh skte hai.
 ****X****X****
 Accha ab agr styling change krna ho to:-
+const title = document.getElementById("title")
 title.style - ye zarur likhna pdta hai uske baad aap background color, color, font, etc kuch bhi chnge kr skte ho,
-mtlb ki puri styliong change kr skte ho aur hn isme change krne ke liye setAttribute bhi ni likhna padta hai.
+mtlb ki puri styling change kr skte ho aur hn isme change krne ke liye setAttribute bhi ni likhna padta hai.
 ex:-
 title.style.backgroundColor = 'yellow'
 title.style.Color = 'red'
@@ -52,7 +53,7 @@ title.innerText
 o/p:- "Learning DOM Manipulation on VS Code"
 
  Accha ab jb aap ye teen likhoge to teeno text content de rhe hai to differnce kya hai
- to pehele innerText aur text content mai dekhte hai maanlo aapne koi content display property se "display:none" krke rakha hai to woh innerText mai show ni hoga but woh textContent mai show hoga, ex:-
+ to pehele innerText aur text content mai dekhte hai - maanlo aapne koi content display property se "display:none" krke rakha hai to woh innerText mai show ni hoga but woh textContent mai show hoga, ex:-
 --- title.innerText
 o/p:- "Learning DOM Manipulation on VS Code"
 --- title.textContent
@@ -63,7 +64,6 @@ ex:-
 title.innerHTML
 ' Learning DOM Manipulation on VS Code
 <span style="display: none;">Bhai kaise ho?</span>
-
 -->
 
 <!--querySelector ye bhi getElement type hi hai like:-
@@ -71,7 +71,7 @@ document.getElementById('title').id = document.querySelector('#title')
 querySelector('.class')
 querySelector('p:first-child') --- is type se bhi likh skte hai
 
-@ document.querySelector('h2') -> isse jitne bhi h2 hai usem sbse pehle aaega woh select hoga.
+@ document.querySelector('h2') -> isse jitne bhi h2 hai usme sbse pehle aaega woh select hoga.
 @ document.querySelectorALL('h2') -> isse sb h2 aajaenge
 @ document.querySelectorALL('h2').length -> isse total kitne hai uska no. aaega -->
 
@@ -118,9 +118,7 @@ new.forEach((L)=>
 L.style.backgroundcolor = 'yellow')
 
 isse loop hoga aur sb ek saath backgroundcolor yello hojaaega
-
-
-
+ 
 -->
 
 
