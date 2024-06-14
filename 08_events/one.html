@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+
+    <ul id="images">
+      <li>
+        <img
+          id="photoshop"
+          src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          id="japan"
+          src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="japan"
+        />
+      </li>
+      <li>
+        <img
+          id="river"
+          src="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="river"
+        />
+      </li>
+      <li>
+        <img
+          id="bird"
+          src="https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          id="prayer"
+          src="https://images.pexels.com/photos/267748/pexels-photo-267748.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="prayer"
+        />
+      </li>
+      <li>
+        <a style="color: aliceblue" href="https://www.google.com/" id="google"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+
+  <script>
+    // 2nd way
+    // document.getElementById("bird").onclick = () => {
+    //   alert("Bird Clicked");
+    // };
+
+    // 3rd way
+    document.getElementById("images").addEventListener(
+      "click",
+      (e) => {
+        // console.log(e)
+        console.log("outer clicked");
+      },
+      false
+    );
+    document.getElementById("japan").addEventListener(
+      "click",
+      (e) => {
+        // console.log(e)
+        console.log("inner clicked");
+        // e.stopPropagation();
+      },
+      false
+    );
+    // default false - event bubling
+    document.getElementById("google").addEventListener("click", (e) => {
+      console.log("google clicked");
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    // ab humko krna ye hai ki jitni bhi images hai usko agr click kre toh woh delete ho jae - hum hr image ko target krne se accha hai uske parent ko target kre.
+    document.querySelector("#images").addEventListener("click", (e) => {
+    //   console.log(e.target.parentNode);
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+      else
+      {
+        alert("Dont click LI")
+      }
+      // let removeIt = e.target.parentNode
+      // removeIt.remove()
+    });
+    // isme kya hora hai ki agr glti se li ko click krre hai to woh pura ek saath delete hori hai photos, to humko kya krmna hai ki li ko click kre to pics delete ni honi chaahiye - to hum e.target.tagName isse tagname pta krlenge fir condition daaldenge "IMG" aae to hi delete krna aur "LI" aae to mt krna 
+  </script>
+</html>
+
+<!-- Goal:-
+     humko ye krna hai ki photo click krne pr kuch event ho
+     1st way:-
+      direct image path ke pas jagah hai wahi pr onClick lga skte hai - pr isme dikkat jaegi ode jyada bda hoga ya complex hoga.
+     2nd way:-
+     id select krlo getElementById se bird ki aur uspe hum "." lgake ocnclick lga skte hai - pr ye bhi jyada accha ni hai old way hai.
+     3rd way :- 
+          BEST way - event listener ki help le skte hai
+      addEventListener laga do 
+     4th way:-  attachEvent - ye internet explorer ke time hota     
+                            tha.
+     5th way:- jQuery -
+     
+     event Object:- ye sb padhna zaruri hai
+     type, timestamp, defaultPrevented, target, toElement, srcElement,
+     currentTarget, clientX, clientY, screenX, screenY,
+     altkey, ctrlkey, shiftkey, keycodes etc.
+
+     jo aakhri parameter hai true or false likha hai uska use hota event capturing aur event bubling mai
+     - event capturing - bahar se andr hota hai - mtlb pehle outer event perform hoga click krne pr fir inner wala hoga, isko invoke ke liye sbka uter wala true hona chaahiye.
+     - event bubling - by default yehi activate rheta hai - mtlb inner wala false hona zaruri chaahiye, aur ye andr se bahar jata hai.
+     - event stoppropagation - agr bubling ya capture ko rokna hai to usme aap e.stopPropagation lga skte hai, to koi outer wagera click ni hoga.
+     - event preventDefault - default jo behaviour hai usko rokna kisi bhi function ya method ka.(Line - 74)
+
+    
+     
+      
+      -->
